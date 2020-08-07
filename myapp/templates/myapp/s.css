@@ -1,0 +1,20 @@
+.container-alt{
+	background-color: rgb(100,100,100);
+	font-size: 20px;
+}
+.container-alt div{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.alt-one{
+	text-align: center;
+	padding-top: 10px;
+	color: rgb(200,200,200);
+}
+
+.alt-two{
+	text-align: center;
+	color: white;
+	font-size: 30px;
+	padding-bottom: 10px;
+}

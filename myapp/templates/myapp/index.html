@@ -1,0 +1,180 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+	<!-- --------container five--------- -->
+	<div class="container-five">
+		<!-- ----one -->
+		<div class="container-five-subone">
+			<div class="container-five-subone-categor">Categories</div>
+			<div>Browse product Categories</div>
+			<div class="container-five-subone-w-m">
+                {% for cat in categories|slice:':2' %}
+				<div>
+					<p>{{cat.category_name}}</p>
+					{% if cat.picture %}
+					<img class="img-one" src="{{cat.picture.url}}">
+					{% else %}
+					{% endif %}
+				</div>
+                {% endfor %}
+			</div>
+
+			<div class="container-five-subone-g-b">
+                {% for cat in categories|slice:'2:4' %}
+				<div>
+					<p>{{cat.category_name}}</p>
+					{% if cat.picture %}
+					<img class="img-one" src="{{cat.picture.url}}">
+					{% else %}
+					{% endif %}
+				</div>
+                {% endfor %}
+			</div>
+			<div class="container-five-subone-see">See All</div>
+		</div>
+		<!-- ---two -->
+		<div class="container-five-subtwo">
+			{% for cat in categories|slice:'4:5' %}
+
+			<div class="container-five-subtwo-computers-head">{{cat}}</div>
+			
+			<div></div>
+
+			<div class="container-five-subone-comput">
+				{% for pro1 in cat.product_set.all|slice:'0:1' %}
+				<div>
+					<p>{{pro1.productName}}</p>
+					{% if pro1.picture %}
+					<img class="img-one" src="{{pro1.picture.url}}">
+					{% else %}
+					{% endif %}
+				</div>
+				{% endfor %}
+
+				{% for pro2 in cat.product_set.all|slice:'1:2' %}
+				<div>
+					<p>{{pro2.productName}}</p>
+					{% if pro2.picture %}
+					<img class="img-one" src="{{pro2.picture.url}}">
+					{% else %}
+					{% endif %}
+			    </div>
+			    {% endfor %}
+			</div>
+			
+			
+			<div class="container-five-subone-comput">
+				{% for pro3 in cat.product_set.all|slice:'2:3' %}
+				<div>
+				    <p>{{pro3.productName}}</p>
+				    {% if pro3.picture %}
+				    <img class="img-one" src="{{pro3.picture.url}}">
+				    {% else %}
+				    {% endif %}
+				</div>
+				{% endfor %}
+
+				{% for pro4 in cat.product_set.all|slice:'3:4' %}
+				<div>
+				    <p>{{pro4.productName}}</p>
+				    {% if pro4.picture %}
+				    <img class="img-one" src="{{pro4.picture.url}}">
+				    {% else %}
+				    {% endif %}
+				</div>
+				{% endfor %}
+			</div>
+			{% endfor %}
+
+			<div class="container-five-subone-see">See All</div>
+
+		</div>
+		<!-- ---three -->
+		<div class="container-five-subthree">
+			{% for cat in categories|slice:'5:6' %}
+			<div  class="container-five-subtwo-computers-head">{{cat}}</div>
+			<div></div>
+
+			<div class="container-five-subone-phones">
+				{% for pro5 in cat.product_set.all|slice:'0:1' %}
+				<div>
+					<p>{{pro5.productName}}</p>
+					{% if pro5.picture %}
+					<img class="img-one" src="{{pro5.picture.url}}">
+					{% else %}
+					{% endif %}
+				</div>
+				{% endfor %}
+
+				{% for pro6 in cat.product_set.all|slice:'1:2' %}
+				<div>
+					<p>{{pro6.productName}}</p>
+					{% if pro6.picture %}
+					<img class="img-one" src="{{pro6.picture.url}}">
+					{% else %}
+					{% endif %}
+			    </div>
+			    {% endfor %}
+			</div>
+			<div class="container-five-subone-phones">
+				{% for pro7 in cat.product_set.all|slice:'2:3' %}
+				<div>
+				    <p>{{pro7.productName}}</p>
+				    {% if pro7.picture %}
+				    <img class="img-one" src="{{pro7.picture.url}}">
+				    {% else %}
+				    {% endif %}
+				</div>
+				{% endfor %}
+
+				{% for pro8 in cat.product_set.all|slice:'3:4' %}
+				<div>
+					<p>{{pro8.productName }}</p>
+					{% if pro8.picture %}
+					<img class="img-one" src="{{pro8.picture.url}}">
+					{% else %}
+					{% endif %}
+				</div>
+				{% endfor %}
+			</div>
+			{% endfor %}
+			<div class="container-five-subone-see">See All</div>
+
+		</div>
+		<!-- ----four hidden----- -->
+		<div class="container-five-subfour"></div>
+	</div>
+<!-- Notes: Container 7, 8, 9, 10 are all repetition of 
+	container-six because the styles are the same -->
+	<!-- --------container six---------  -->
+	<div class="container-six">
+		{% for cat in categories|slice:'7:11' %}
+		<div class="container-six-heading">{{cat}}</div>
+		<div class="container-six-products">
+			{% for produ in cat.product_set.all|slice:':5' %}
+			<div>
+			    <p>{{produ.productName}}</p>
+			    {% if produ.picture %}
+			    <img class="img-one" src="{{produ.picture.url}}">
+			    {% else %}
+			    {% endif %}
+			</div>
+			{% endfor %}
+		</div>
+		{% endfor %}
+		
+	</div>
+	<!-- Notes: Container 7, 8, 9, 10 are all repetition of 
+	container-six because the styles are the same -->
+	<!-- ------------------Container-seven--------- -->
+	
+	<!-- ------------- -->
+    <div id="w"></div>
+	<div id="demo" style="color: rgb(0,0,0);"></div>
+	<button onclick="myFunction()">try</button>
+	<script type="text/javascript" src="index.js"></script>
+</body>
+</html>
+
+{% endblock %}

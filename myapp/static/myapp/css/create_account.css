@@ -1,0 +1,47 @@
+.create_account{
+	width: 400px;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+	border: solid 1px rgb(200,200,200);
+	border-radius: 20px;
+
+}
+
+.create_account-div{
+   width: 350px;
+   margin-left: 25px;
+   margin-top: 20px;
+}
+.create_account-div input{
+	height: 20px;
+}
+.create_account-span{
+	display: inline-block;
+   width: 150px;
+}
+.create_account-first-div{
+	margin-top: 70px;
+	margin-left: 25px;
+}
+
+.create_account-last-div{
+	margin-bottom: 70px;
+	margin-left: 25px;
+	margin-top: 20px;
+}
+.create_account-last-div input{
+	height: 30px;
+}
+.create_account-span-star{
+	font-size: 19px;
+	font-weight: bold;
+	color: red;
+}
+ /*----Message after signing up------*/
+ .message-after-successfully-signing-up{
+ 	padding-top: 10px;
+ 	padding-bottom: 10px;
+ 	text-align: center;
+ 	background-color:#33cc33;
+ }

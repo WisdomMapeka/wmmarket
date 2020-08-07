@@ -1,0 +1,85 @@
+   a{
+   	text-decoration: none;
+   }
+   .arts-and-craft-container-one{
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	font-size: 13px;
+	margin-bottom: 30px;
+	}
+
+.arts-and-craft-container-one div{
+	border: solid 1px rgb(200,200,200);
+	min-width: 400px;
+	margin-top: 10px;
+}
+.arts-and-craft-container-one div p{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.arts-and-craft-full-pic, 
+.arts-and-craft-view-details,
+.arts-and-craft-add-cart,
+.arts-and-craft-buy{
+	width: 120px;
+	text-align: center;
+	border: solid  rgb(200,200,200) 1px;
+	background: linear-gradient(to bottom, #d9b38c ,  #86592d);
+	box-shadow: 0.5px 0.5px 0.5px  #f2e6d9;
+	color: rgb(220,220,220);
+	padding: 5px;
+}
+/*================first midea querry=====================*/
+@media only screen and (min-width: 552px){
+	.arts-and-craft-container-one div{
+	min-width: unset;
+	}
+}
+
+
+/*---------------arts and craft product-details------------*/
+.arts-p-details-row-one{
+	display: flex;
+	justify-content: space-between;
+	margin-left: 20px;
+	margin-right: 20px;
+	margin-top: 20px;
+	font-size: 14px;
+}
+.arts-p-details-seller{
+	border: solid  rgb(200,200,200) 1px;
+	border-radius: 10px;
+}
+.arts-p-details-seller p, .arts-p-details p{
+	margin-left: 10px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+.arts-p-details-row-one div{
+	width: 33%;
+}
+.arts-p-details-add-to-cart,
+.arts-p-details-buy{
+	text-align: center;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border: solid rgb(200,200,200) 1px;
+	background: linear-gradient(to bottom, #b3b3b3 , #cccccc);
+	box-shadow: 0.5px 0.5px 0.5px #b3b3b3;
+}
+.arts-p-details-row-two{
+	margin-right: 20px;
+	margin-left: 20px;
+	margin-top: 40px;
+	font-size: 15px;
+}
+.arts-p-details-description{
+	text-align: center;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	border: solid rgb(200,200,200) 1px;
+	background: linear-gradient(to bottom, #b3b3b3 , #cccccc);
+	box-shadow: 0.5px 0.5px 0.5px #b3b3b3;
+}
+

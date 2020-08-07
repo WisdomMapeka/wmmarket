@@ -1,0 +1,376 @@
+{% load static %}
+{% block header %}
+ <!-- ////////////////////////////header start ///////////////////-->
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/footer.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/styles.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/main-pages.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/s.css' %}">
+  <link rel="stylesheet" type="text/css" href="{% static 'myapp/css/create_account.css' %}">
+
+</head>
+<body onresize="mylen()">
+<!-- -----------container-one-------------------------- -->
+    <div class="container-one">
+        <div class="greeting"> 
+          {% if user.is_authenticated %}
+           Hello. {{user}} Wellcome
+           <a href="{% url 'logout' %}">Sign out</a>
+           {% else %}
+            Hello. Please 
+            <a href="{% url 'login' %}">Sign in</a> or <a href="{% url 'myapp:signup' %}">create account</a>
+            {% endif %}
+     
+        </div>
+        <div class="sell"><a href="sell-with-us.html">Promotions</a></div>
+        <div class="help-contact">You need help contact us</div>
+        <div class="cart-image">
+            <img width="20" src="{{shopping_cart.picture.url}}">
+        </div>
+        <div class="cart-item-num">10</div> 
+    </div>
+<!-- -----------container-two-------------------------- -->
+    <div class="container-two">
+        <div class="logo">WM</div>
+        <!-- ******Shop by category dropdown start*** -->
+        <div class="shop-by-cate shop-by-category">
+             
+        Shop by Category
+         <img width="10" src="{{arrow_down.picture.url}}">
+<!-- ===================== Start ===================-->
+    <div class="shop-by-category-drop-down-content">
+      <div class="flex-container">
+
+      <!-- =======================Column one ===================-->
+          <div class="column-one">
+            <div>
+              <p class="product-links-heading">Women's Clothes</p>
+              <p class="product-links">Dresses</p>
+              <p class="product-links">Hats</p>
+              <p class="product-links">Tops</p>
+              <p class="product-links">Blouses</p>
+              <p class="product-links">Trousers</p>
+            </div>
+            <div>
+              <p class="product-links-heading">Men's Clothes</p>
+              <p class="product-links">Shirts</p>
+              <p class="product-links">Suits</p>
+              <p class="product-links">Jeans</p>
+              <p class="product-links">Shoes</p>
+              <p class="product-links">Shorts</p>
+              <p class="product-links">T.shirts</p>
+            </div>
+          </div>
+         
+      <!-- =======================Column two ===================-->
+          <div class="column-two">
+            <div>
+              <p class="product-links-heading">Beauty Products</p>
+              <p class="product-links">Face Wash</p>
+              <p class="product-links">Body Soaps</p>
+              <p class="product-links">Face Soaps</p>
+              <p class="product-links">Sunscreens</p>
+              <p class="product-links">Face Lotions</p>
+              <p class="product-links">Body Lotions</p>
+              <p class="product-links"> Bath Foams</p>
+            </div>
+            <div>
+              <p class="product-links-heading">Books</p>
+              <p class="product-links">Novels</p>
+              <p class="product-links">Comics</p>
+              <p class="product-links">Diarries</p>
+              <p class="product-links">Exercise</p>
+            </div>
+          </div>
+      <!-- =======================Column three ===================-->
+          <div class="column-three">
+            <div class="product-links-heading-today">Today's Special</div>
+            <div class="product-links-heading-arts">Arts and Craft</div>
+            <div>
+                <p class="product-links-heading">Automotive</p>
+                <p class="product-links">Cars</p>
+                <p class="product-links">Trucks</p>
+                <p class="product-links"> Buses</p>
+                <p class="product-links">Engines</p>
+                <p class="product-links">Cargo Carries</p>
+            </div>
+            <div>
+              <p class="product-links-heading">Baby's Wear</p>
+              <p class="product-links">Diapers</p>
+              <p class="product-links">T.Shirts</p>
+              <p class="product-links">Pollonecks</p>
+            </div>
+          </div>
+      <!-- =======================Column four ===================-->
+
+           <div class="column-four">
+            <div>
+              <p class="product-links-heading">Computers</p>
+              <p class="product-links">Desktops</p>
+              <p class="product-links">Laptops</p>
+              <p class="product-links">Phones</p>
+              <p class="product-links">Harddrives</p>
+              <p class="product-links">Cables</p>
+            </div>
+            <div>
+              <p class="product-links-heading">Electronics</p>
+              <p class="product-links">Cables</p>
+              <p class="product-links">Cells</p>
+              <p class="product-links">MCBs</p>
+              <p class="product-links">Switch</p>
+            </div>
+          </div>
+      <!-- =======================Column Five ===================-->
+          <div class="column-five">
+            <div>
+              <p class="product-links-heading">Girls</p>
+              <p class="product-links">Dresses</p>
+              <p class="product-links">Tops</p>
+              <p class="product-links">T.shirts</p>
+            </div>
+            <div>
+              <p class="product-links-heading">Boys</p>
+              <p class="product-links">Shirts</p>
+              <p class="product-links">T.shirts</p>
+              <p class="product-links">Jeans</p>
+            </div>
+            <div>
+              <p class="product-links-heading">Health Products</p>
+              <p class="product-links">Sythetic Drugs</p>
+              <p class="product-links">Herbs</p>
+            </div>
+          </div>
+        </div>
+    </div>
+
+<!-- ======================= end ===================-->
+   </div>
+<!-- **********Shop by category dropdown end****************** -->
+
+
+<!-- Seach form starts -->
+
+
+            <form class="search-form">
+                <div class="search-box">
+                <input type="text" autocomplete="off" name="search" placeholder="search Products ...">
+                <button>search</button>
+                <div class="result"></div>
+                </div>
+            </form>
+
+
+<!-- Seach form ends -->
+    </div>
+<!-- ------------------container-three----------------- -->
+<div id="container-three-id" class="container-three">
+    <p class="home"><a href="{% url 'myapp:index' %}"> Home</a></p>
+    <p class="arts"><a href="{% url 'myapp:product_list_with_same_category' cat1.slug %}">{{cat1}}</a></p>
+    <!-- <p class="arts"><a href="{{ cat1.get_absolute_url  }}">{{cat1}}</a></p> -->
+    <p id="automo" class="automo"><a href="{% url 'myapp:product_list_with_same_category' cat2.slug %}">{{cat2}}</a></p>
+    <p id="baby" class="baby"><a href="{% url 'myapp:product_list_with_same_category' cat3.slug %}">{{cat3}}</a></p>
+    <p id="beauty" class="beauty"><a href="{% url 'myapp:product_list_with_same_category' cat4.slug %}">{{cat4}}</a></p>
+    <p id="book" class="book"><a href="{% url 'myapp:product_list_with_same_category' cat5.slug %}">{{cat5}}</a> </p>
+    <p id="computers" class="computers"><a href="{% url 'myapp:product_list_with_same_category' cat6.slug %}">{{cat6}}</a> </p>
+    <p id="electro" class="electro"><a href="{% url 'myapp:product_list_with_same_category' cat7.slug %}">{{cat7}}</a> </p>
+    <div id="dropdown" class="dropdown">
+      <span class="More">More&nbsp;<img width="10" src="{{arrow_down.picture.url}}"></span>
+      <div class="dropdown-content">
+        <div class="dropdown-content-box-display">
+          <div class="dropdown-content-box-one">
+            <p class="women"><a href="{% url 'myapp:product_list_with_same_category' cat8.slug %}">{{cat8}}</a></p>
+            <p class="men"><a href="{% url 'myapp:product_list_with_same_category' cat9.slug %}">{{cat9}}</a></p>
+            <p class="girls"><a href="{% url 'myapp:product_list_with_same_category' cat10.slug %}">{{cat10}}</a></p>
+            <p class="boy"><a href="{% url 'myapp:product_list_with_same_category' cat11.slug %}">{{cat11}}</a></p>
+            <p class="health"><a href="{% url 'myapp:product_list_with_same_category' cat12.slug %}">{{cat12}}</a></p>
+            <p class="home"><a href="{% url 'myapp:product_list_with_same_category' cat13.slug %}">{{cat13}}</a> </p>
+            <p class="industrial"><a href="{% url 'myapp:product_list_with_same_category' cat14.slug %}">{{cat14}}</a></p>
+          </div>
+          <div class="dropdown-content-box-two">
+            <p class="agro"><a href="{% url 'myapp:product_list_with_same_category' cat15.slug %}">{{cat15}}</a></p>
+            <p class="food"><a href="{% url 'myapp:product_list_with_same_category' cat16.slug %}">{{cat16}}</a></p>
+            <p class="animas"><a href="{% url 'myapp:product_list_with_same_category' cat17.slug %}">{{cat17}}</a> </p>
+            <p class="services"><a href="{% url 'myapp:product_list_with_same_category' cat18.slug %}">{{cat18}}</a></p>
+            <p class="school"><a href="{% url 'myapp:product_list_with_same_category' cat19.slug %}">{{cat19}}</a> </p>
+            <p class="cars"><a href="{% url 'myapp:product_list_with_same_category' cat20.slug %}">{{cat20}}</a> </p>
+            <p class="games"><a href="{% url 'myapp:product_list_with_same_category' cat21.slug %}">{{cat21}}</a></p>
+          </div>
+          <div id="dropdown-content-id" class="dropdown-content-box-three"> </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+    <!-- ============== -->
+
+
+
+  <!-- =============== -->
+    <!-- ----------container four------------- -->
+    {% if user.is_authenticated %}
+    {% else %}
+    <div class="container-four">
+        <div>
+            <p>IF you Already Have an account</p>
+            <p class="container-four-signin"><a href="log_in.html">Sign In</a></p>
+        </div>
+
+        <div>
+            <p class="container-four-sell">Sell Your Products With Us</p>
+        </div>
+
+        <div>
+            <p>For Better and customised experience</p>
+            <p class="container-four-signup"><a href="signup_account.html">Sign Up</a> </p>
+        </div>
+    </div>
+    {% endif %}
+
+
+
+
+
+
+
+
+   <!-- ////////////////////////////header end///////////////////////// -->
+{% endblock %}
+
+{% block content %}
+{% endblock %}
+
+{% block footer %}
+
+    <!-- --------------footer start------------------------ -->
+
+
+  
+
+
+    
+      <div class="footer-start-head">
+      Could Not Find what You are Looking for. The links below might help</div>
+      <footer>
+        <div class="footer-divs">
+          <div>
+            <p class="footer-headings">Phones</p>
+            <p>Screen Guards</p>
+            <p>Cables</p>
+            <p>Chargers</p>
+            <p>Batteries</p>
+            <p>Ear Phones</p>
+            <p>Screens</p>
+          </div>
+          <div>
+            <p class="footer-headings">Cars</p>
+            <p>Window Panels</p>
+            <p>Auto</p>
+            <p>Wheels</p>
+            <p>Engines</p>
+            <p>Oils</p>
+            <p>Lubricants</p>
+          </div>
+          <div>
+            <p class="footer-headings">Phones</p>
+            <p>Screen Guards</p>
+            <p>Cables</p>
+            <p>Chargers</p>
+            <p>Batteries</p>
+            <p>Ear Phones</p>
+            <p>Screens</p>
+          </div>
+        </div>
+
+        <div class="footer-divs">
+          <div>
+            <p class="footer-headings">Women</p>
+            <p>Outfits</p>
+            <p>Night Wear</p>
+            <p>Languerie</p>
+            <p>Trousers</p>
+            <p>Skirts</p>
+            <p>Dresses</p>
+          </div>
+          <div>
+            <p class="footer-headings">School</p>
+            <p>bags</p>
+            <p>writing Bokks</p>
+            <p>Novels</p>
+            <p>Science Textbooks</p>
+            <p>Economics</p>
+            <p>Business</p>
+          </div>
+          <div>
+            <p class="footer-headings">Women</p>
+            <p>Outfits</p>
+            <p>Night Wear</p>
+            <p>Languerie</p>
+            <p>Trousers</p>
+            <p>Skirts</p>
+            <p>Dresses</p>
+          </div>
+        </div>
+
+        <div class="footer-divs">
+          <div>
+            <p class="footer-headings">Electrical</p>
+            <p>MCBs</p>
+            <p>Cables</p>
+            <p>Plugs</p>
+            <p>Tubing</p>
+            <p>Oils</p>
+            <p>Lubricants</p>
+          </div>
+          <div>
+            <p class="footer-headings">Men</p>
+            <p>Shirts</p>
+            <p>Trousers</p>
+            <p>Shorts</p>
+            <p>Hats</p>
+            <p>Suits</p>
+            <p>bags</p>
+          </div>
+          <div>
+            <p class="footer-headings">Electrical</p>
+            <p>MCBs</p>
+            <p>Cables</p>
+            <p>Plugs</p>
+            <p>Tubing</p>
+            <p>Oils</p>
+            <p>Lubricants</p>
+          </div>
+        </div>
+
+
+        <div>
+          <div>
+            <p class="footer-headings">Important Read</p>
+            <p>Privacy</p>
+            <p>Cookie Usage</p>
+            <p>Terms and Conditions</p>
+            <p>Return Policies</p>
+            <p>Complaints</p>
+            <p>Contacts</p>
+            <p>Copy Rights</p>
+          </div>
+        </div>
+      </footer>
+      <div class="copy-rights">WM &copy; 2019</div>
+  
+
+
+
+
+  <script type="text/javascript" src="../../static/myapp/js/index.js"></script>
+
+
+
+
+    <!-- --------------footer end--------------------------- -->
+{% endblock %}
+

@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% block content %} 
+	<!-- ----------container four------------- -->
+<!-- 	<div class="container-four">
+
+
+
+		<div>
+			<p class="container-four-sell">Signing Up</p>
+		</div>
+
+	</div>
+ -->
+  <!-- ======================= -->
+  <!-- Message after signing Up successfully -->
+ 
+  
+  <div class="message-after-successfully-signing-up">
+    Congradulations.
+     You have successfully created an account. You can now log in
+  </div>
+
+  <!-- Sign up Form -->
+  <form class="create_account" action="{% url 'myapp:signup' %}" method="POST">
+    {% csrf_token %}
+    <div class="create_account-first-div">
+      Required<span class="create_account-span-star">*</span>
+    </div>
+    <div class="create_account-div">
+      <span class="create_account-span">First Name</span> 
+      <input type="text" name="first_name">
+      <span class="create_account-span-star">*</span>
+      <span>{{message}}</span>
+    </div>
+    <div class="create_account-div">
+      <span class="create_account-span">Last Name</span> 
+      <input type="text" name="last_name">
+      <span class="create_account-span-star">*</span>
+      <span>{{message}}</span>
+    </div>
+    <div class="create_account-div">
+      <span class="create_account-span">City</span> 
+      <input type="text" name="city">
+      <span class="create_account-span-star">*</span>
+    </div>
+    <div class="create_account-div">
+      <span class="create_account-span">State</span>
+      <input type="text" name="state">
+    </div>
+    <div class="create_account-div">
+      <span class="create_account-span">Phone Number</span> 
+      <input type="text" name="phone_number">
+    </div>
+    <div class="create_account-div">
+      <span class="create_account-span">Email</span> 
+      <input type="text" name="email">
+      <span class="create_account-span-star">*</span>
+      <span>{{message}}</span>
+    </div>
+    <div class="create_account-div">
+      <span class="create_account-span">Password</span> 
+      <input type="text" name="password">
+      <span class="create_account-span-star">*</span>
+      <span>{{message}}</span>
+    </div>
+    <div class="create_account-div">
+      <span class="create_account-span">Repeat Password</span> 
+      <input type="text" name="repeatpassword">
+      <span class="create_account-span-star">*</span>
+      <span>{{message}}</span>
+    </div>
+    <div class="create_account-last-div">
+      <input type="submit" name="create" value="create account">
+    </div>
+  </form>
+
+
+
+
+<!-- =================================== -->
+<!--     <div class="call-to-action">
+    Sign Up and Get More Customised Experience
+  </div> -->
+
+  {% endblock %}
+  <!-- --------------footer------------------------ -->
+  <!-- ------------- -->
+    <div id="w"></div>
+  <div id="demo" style="color: rgb(0,0,0);"></div>
+  <button onclick="myFunction()">try</button>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>

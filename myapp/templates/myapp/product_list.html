@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+
+  <!-- ======================= -->
+  <!-- *****baby wear product layout start*****-->
+  <!-- row one -->
+   <!-- row one -->
+   {% block content %}
+  <div class="arts-and-craft-container-one">
+
+    {% for product in category.product_set.all %}
+    <div>
+      <p><img width="220" src="{{product.picture.url}}"></p>
+      <p style="font-size: 20px;">{{product.productName}}</p>
+      <p>price&nbsp;:&nbsp;<span style="text-decoration: line-through;">{{product.new_price}}</span>
+              &nbsp;&nbsp;&nbsp;<span>{{product.old_price}}</span>
+      </p>
+      <p>Rating:{{product.ratings}}</p>
+      <p>Instock: &nbsp;:&nbsp;{{product.instock}} units</p>
+      <p><span class="arts-and-craft-add-cart">add to cart</span> <span class="arts-and-craft-buy">Buy</span></p>
+      <p class="arts-and-craft-full-pic">View Full size pic</p>
+      <p class="arts-and-craft-view-details"><a href="arts-and-craft-product-details.html">View More details about the product</a></p>
+    </div>
+    {% endfor %}
+
+<!--     <div>
+      <p><img width="220" src="images/books and pens/pen2.jpg"></p>
+      <p style="font-size: 20px;">My Book</p>
+      <p>price&nbsp;:&nbsp;<span style="text-decoration: line-through;">5</span>
+              &nbsp;&nbsp;&nbsp;<span>4</span>
+      </p>
+      <p>Rating:*****</p>
+      <p>Instock: &nbsp;:&nbsp;300 units</p>
+      <p><span class="arts-and-craft-add-cart">add to cart</span> <span class="arts-and-craft-buy">Buy</span></p>
+      <p class="arts-and-craft-full-pic">View Full size pic</p>
+      <p class="arts-and-craft-view-details"><a href="arts-and-craft-product-details.html">View More details about the product</a></p>
+    </div>
+
+    <div>
+      <p><img width="220" src="images/books and pens/pen2.jpg"></p>
+      <p style="font-size: 20px;">My Book</p>
+      <p>price&nbsp;:&nbsp;<span style="text-decoration: line-through;">5</span>
+              &nbsp;&nbsp;&nbsp;<span>4</span>
+      </p>
+      <p>Rating:*****</p>
+      <p>Instock: &nbsp;:&nbsp;300 units</p>
+      <p><span class="arts-and-craft-add-cart">add to cart</span> <span class="arts-and-craft-buy">Buy</span></p>
+      <p class="arts-and-craft-full-pic">View Full size pic</p>
+      <p class="arts-and-craft-view-details"><a href="arts-and-craft-product-details.html">View More details about the product</a></p>
+    </div>
+
+    <div>
+      <p><img width="220" src="images/books and pens/pen2.jpg"></p>
+      <p style="font-size: 20px;">My Book</p>
+      <p>price&nbsp;:&nbsp;<span style="text-decoration: line-through;">5</span>
+              &nbsp;&nbsp;&nbsp;<span>4</span>
+      </p>
+      <p>Rating:*****</p>
+      <p>Instock: &nbsp;:&nbsp;300 units</p>
+      <p><span class="arts-and-craft-add-cart">add to cart</span> <span class="arts-and-craft-buy">Buy</span></p>
+      <p class="arts-and-craft-full-pic">View Full size pic</p>
+      <p class="arts-and-craft-view-details"><a href="arts-and-craft-product-details.html">View More details about the product</a></p>
+    </div>
+
+    <div>
+      <p><img width="220" src="images/books and pens/pen2.jpg"></p>
+      <p style="font-size: 20px;">My Book</p>
+      <p>price&nbsp;:&nbsp;<span style="text-decoration: line-through;">5</span>
+              &nbsp;&nbsp;&nbsp;<span>4</span>
+      </p>
+      <p>Rating:*****</p>
+      <p>Instock: &nbsp;:&nbsp;300 units</p>
+      <p><span class="arts-and-craft-add-cart">add to cart</span> <span class="arts-and-craft-buy">Buy</span></p>
+      <p class="arts-and-craft-full-pic">View Full size pic</p>
+      <p class="arts-and-craft-view-details"><a href="arts-and-craft-product-details.html">View More details about the product</a></p>
+    </div>
+
+    <div>
+      <p><img width="220" src="images/books and pens/pen2.jpg"></p>
+      <p style="font-size: 20px;">My Book</p>
+      <p>price&nbsp;:&nbsp;<span style="text-decoration: line-through;">5</span>
+              &nbsp;&nbsp;&nbsp;<span>4</span>
+      </p>
+      <p>Rating:*****</p>
+      <p>Instock: &nbsp;:&nbsp;300 units</p>
+      <p><span class="arts-and-craft-add-cart">add to cart</span> <span class="arts-and-craft-buy">Buy</span></p>
+      <p class="arts-and-craft-full-pic">View Full size pic</p>
+      <p class="arts-and-craft-view-details"><a href="arts-and-craft-product-details.html">View More details about the product</a></p>
+    </div> -->
+
+    
+  </div>
+
+<!-- *****arts and craft product layout end****-->
+<!-- =================================== -->
+
+    
+
+
+
+
+  <!-- ------------- -->
+    <div id="w"></div>
+  <div id="demo" style="color: rgb(0,0,0);"></div>
+  <button onclick="myFunction()">try</button>
+  <script type="text/javascript" src="index.js"></script>
+</body>
+</html>
+
+{% endblock %}

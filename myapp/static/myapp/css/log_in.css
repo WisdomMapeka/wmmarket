@@ -1,0 +1,71 @@
+.logo{
+	padding-top: 15px;
+	padding-bottom: 15px;
+	font-size: 50px;
+	color: green;
+
+}
+.header-login-text{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 30px;
+}
+.foot{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: black;
+	color: white;
+	text-align: center;
+	font-size: 20px;
+}
+.login-form{
+	border: solid 1px;
+	width: 400px;
+	margin: auto;
+	margin-top: 100px;
+	margin-bottom: 100px;
+}
+.login-form form{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+form {
+	margin-left: 20px;
+}
+form input{
+	height: 20px;
+}
+.log-in-home{
+	padding-top: 10px;
+	padding-bottom: 10px;
+	background-color: green;
+	width: 200px;
+	text-align: center;
+
+}
+.log-in-home:hover{
+	background-color: #e6e6ff;
+}
+.invalid{
+	color: red;
+	font-style: italic;
+	text-align: center;
+	margin-top: 90px;
+}
+.log-in-crerate-account{
+	margin-bottom: 90px;
+	margin-left: 20px;
+	width: 200px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	padding-left: 5px;
+}
+a{
+	text-decoration: none;
+}
+.log-in-crerate-account:hover{
+	background-color:  #e6e6ff;
+}
